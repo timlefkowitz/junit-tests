@@ -20,7 +20,7 @@ public class Student {
     }
 
     public String getName(){
-       return this.name;
+        return this.name;
     }
 
     public void addGrade(int grade){
@@ -31,7 +31,7 @@ public class Student {
         return this.grades;
     }
 
-    public double getGradeAverage(ArrayList<Integer> grades){
+    public double getGradeAverage(){
         int total = 0;
         for(int i=0; i < grades.size(); i++){
             total = total + grades.get(i);
@@ -46,6 +46,12 @@ public class Student {
     //main
     public static void main(String[] args){
 
+        Student jeff = new Student("jeff", 12);
+        jeff.addGrade(92);
+        jeff.addGrade(82);
+        jeff.addGrade(72);
+        jeff.addGrade(72);
+        System.out.println(jeff.getGradeAverage());
 
     }
 }
